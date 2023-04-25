@@ -13,7 +13,7 @@ private baseUrl = 'http://localhost:8080/api/products';
   constructor(private httpClient: HttpClient ) { }
 
   // This method returns an Observable<Product[]> from the Spring Data REST API
-  getProductList(): Observable<Product[]> {
+  getProductList(theCategoryId: number): Observable<Product[]> {
     return this.httpClient.get<GetResponse>(this.baseUrl).pipe(
       map(response => response._embedded.products) 
     );
