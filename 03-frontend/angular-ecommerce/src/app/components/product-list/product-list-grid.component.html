@@ -3,8 +3,8 @@
     <div class="container-fluid">
       <div class="row">
         <div *ngFor="let tempProduct of products" class="col-md-3 py-2">
-          <div class="card">
-            <img class="card-img-top img-responsive" src="{{ tempProduct.imageUrl }}" alt="Product image">
+          <div class="card card-sm">
+            <img class="card-img-top img-responsive img-fluid" src="{{ tempProduct.imageUrl }}" alt="Product image">
             <div class="card-body">
               <h5 class="card-title">{{ tempProduct.name }}</h5>
               <p class="card-text">{{ tempProduct.unitPrice | currency: 'USD' }}</p>

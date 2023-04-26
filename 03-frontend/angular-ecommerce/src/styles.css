@@ -523,6 +523,10 @@ input.au-input.au-input-xl{
  * Products List
  * ----------------------------
  */
+ .img-fluid {
+    max-width: 200px;
+    max-height: 200px;
+ }
 
 .product-box img {
     width: 150px;
