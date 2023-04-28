@@ -22,8 +22,8 @@ export class ProductService {
     return this.httpClient.get<Product>(productUrl);
   }
 
-  //
-  getProductListPaginate(thePage: number,
+  
+  getProductListPaginate(thePage: number, 
                          thePageSize: number,
                          theCategoryId: number): Observable<GetResponseProducts> {
     // Need to build URL based on category id, page and size
