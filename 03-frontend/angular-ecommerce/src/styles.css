@@ -984,6 +984,9 @@ footer ul li{
     .footer-pagination{
         text-align:center
     }
+    .pag{
+        margin-left: 10%;
+    }
     .product-box{
         text-align:centerg
     }
@@ -1004,8 +1007,8 @@ footer ul li{
         background:#205b8d
     }
     input.au-input.au-input-xl{
-        border-radius:0!important;
-        margin-right:0
+        border-radius:20px!important;
+        margin-right:20px
     }
     .cart-area.d-b{
         display:block
