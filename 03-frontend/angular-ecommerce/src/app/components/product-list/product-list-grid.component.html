@@ -43,7 +43,7 @@
               <h5 class="card-title">{{ tempProduct.name }}</h5>
               </a>
               <p class="card-text h5">{{ tempProduct.unitPrice | currency: 'USD' }}</p>
-              <a href="#" class="primary-btn btn-lg">Add to cart</a>
+              <button (click)="addToCart(tempProduct)" class="btn btn-primary btn-lg">Add to cart</button>
             </div>
           </div>
         </div> 
