@@ -824,6 +824,10 @@ footer ul li{
     .container{
         max-width:1320px
     }
+    #quantity{
+        margin-left: 25%;
+    }
+
 }
 
 @media (min-width:992px) and (max-width:1199px){
@@ -841,6 +845,8 @@ footer ul li{
     .header-wrap .account-item>.content{
         display:none
     }
+
+
 }
 
 
@@ -936,6 +942,10 @@ footer ul li{
         -ms-flex-pack:justify;
         justify-content:space-between
     }
+
+    #quantity{
+        margin-left: 5%;
+    }
 }
 
 
@@ -973,6 +983,11 @@ footer ul li{
         height: 50px;
         width: 100px
     }
+
+    .justify-content-start{
+        padding-top: 10px;
+    }
+
 
     .cart-area i{
         font-size:22px;
@@ -1047,5 +1062,9 @@ footer ul li{
         background:#fff;
         border:0;
         padding:8px 0
+    }
+
+    #quantity{
+        margin-left: -1%;
     }
 }
