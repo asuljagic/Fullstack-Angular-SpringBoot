@@ -515,7 +515,7 @@ input.au-input.au-input-xl{
     background:#fff
 }
 .main-content.page-m{
-    padding:10% 15%!important
+    padding: 10% 30% 10% 5%;
 }
 
 /* 
@@ -575,13 +575,14 @@ input.au-input.au-input-xl{
     position:relative;
     margin-bottom:45px;
     padding:50px 20px;
-    border:3px solid #ccc
+    border-radius:10px;
+    border:3px solid #0da8e4
 }
 .form-area h3{
     position:absolute;
     top:-26px;
     left:13px;
-    background:#e5e5e5;
+    background: #e5e5e5;
     padding:10px 20px;
     font-weight:500;
     z-index:23;
@@ -689,7 +690,7 @@ select{
 }
 table.table.table-bordered{
     border:1px solid #ccc;
-    background:#fff
+    background:#fff;
 }
 .table-bordered td,.table-bordered th{
     border:2px solid #dee2e6!important
