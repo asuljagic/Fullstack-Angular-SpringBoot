@@ -32,6 +32,7 @@
                 </div>
 
                 <!--shipping address form group -->
+                
                 <div formGroupName="shippingAddress" class="form-area">
                     <h3>Shipping Address</h3>
                     <div class="row">
@@ -79,6 +80,7 @@
                         </div>
                     </div>
                 </div>
+                
 
                 <!-- Add check box to copy shipping to billing-->
                 <div class="input-space">
@@ -89,6 +91,7 @@
                 </div>
 
                 <!--billing address form group -->
+                
                 <div formGroupName="billingAddress" class="form-area">
                     <h3>Biliing Address</h3>
                     <div class="row">
@@ -136,15 +139,78 @@
                         </div>
                     </div>
                 </div>
-
                 
 
-                <!--credit card form group -->
+                <!--credit card-->
+                <div formGroupName="creditCard" class="form-area">
+                    <h3>Credit Card</h3>
+                    <div class="row">
+                        <div class="col-md-2 mt-2"><label>Card Type</label></div>
+                        <div class="col-md-9">
+                            <div class="input-space">
+                               <select formControlName="cardType">
+                                      <option>Visa</option>
+                                      <option>Mastercard</option>
+                               </select>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-2 mt-2"><label>Name on Card</label></div>
+                        <div class="col-md-9">
+                            <div class="input-space">
+                                <input type="text" formControlName="nameOnCard" class="form-control" placeholder="Name on Card">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-2 mt-2"><label>Card Number</label></div>
+                        <div class="col-md-9">
+                            <div class="input-space">
+                                <input type="text" formControlName="cardNumber" class="form-control" placeholder="Card Number">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-2 mt-2"><label>Security Code</label></div>
+                        <div class="col-md-9">
+                            <div class="input-space">
+                                <input type="text" formControlName="securityCode" class="form-control" placeholder="Security Code">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-2 mt-2"><label>Expiration Month</label></div>
+                        <div class="col-md-9">
+                            <div class="input-space">
+                               <select formControlName="expirationMonth">
+                                      <option>TO DO</option>
+                               </select>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-2 mt-2"><label>Expiration Year</label></div>
+                        <div class="col-md-9">
+                            <div class="input-space">
+                               <select formControlName="expirationYear">
+                                      <option>TO DO</option>
+                               </select>
+                            </div>
+                        </div>
+                    </div>
+                </div>
 
 
 
                 <!--review order -->
+                <div class="form-area review">
+                    <h3>Review your order</h3>
 
+                    <p>Total Quantity: {{ totalQuantity }}</p>
+                    <p>Shipping: FREE</p>
+                    <p>Total Price: {{ totalPrice | currency: 'USD' }}</p>
+                </div>
                 <!-- submit button -->
                 <div class="text-center">
                     <button class="btn btn-info btn-lg" type="submit">Purchase</button>

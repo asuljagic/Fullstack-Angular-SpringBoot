@@ -573,10 +573,14 @@ input.au-input.au-input-xl{
 .form-area{
     background:#e5e5e5;
     position:relative;
+    width:70%;
     margin-bottom:45px;
     padding:50px 20px;
     border-radius:10px;
     border:3px solid #0da8e4
+}
+.review{
+    border:3px solid #000a0e;
 }
 .form-area h3{
     position:absolute;
@@ -597,7 +601,7 @@ input.au-input.au-input-xl{
     margin-bottom:50px
 }
 .input-space input[type=text]{
-    width:100%;
+    width:90%;
     height:40px;
     border-radius:30px;
     outline:0;
@@ -605,7 +609,7 @@ input.au-input.au-input-xl{
     border:1px solid #ccc
 }
 .input-space select{
-    width:100%;
+    width:90%;
     height:40px;
     border-radius:30px;
     outline:0;
@@ -847,6 +851,10 @@ footer ul li{
         display:none
     }
 
+    .form-area{
+        width: 100%
+    }
+
 
 }
 
@@ -946,6 +954,10 @@ footer ul li{
 
     #quantity{
         margin-left: 5%;
+    }
+
+    .form-area{
+        width: 100%;
     }
 }
 
@@ -1067,5 +1079,9 @@ footer ul li{
 
     #quantity{
         margin-left: -1%;
+    }
+
+    .form-area{
+        width: 100%;
     }
 }
