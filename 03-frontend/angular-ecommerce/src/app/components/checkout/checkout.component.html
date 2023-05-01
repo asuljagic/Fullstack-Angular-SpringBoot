@@ -243,6 +243,12 @@
                                       <option>Visa</option>
                                       <option>Mastercard</option>
                                </select>
+                               <div *ngIf="creditCardType!.invalid && (creditCardType!.dirty || creditCardType!.touched)" class="alert alert-danger mt-1 error">
+
+                                <div *ngIf="creditCardType!.errors!['required']">Card Type is required.</div>
+                           
+                           </div>
+
                             </div>
                         </div>
                     </div>
@@ -251,6 +257,12 @@
                         <div class="col-md-9">
                             <div class="input-space">
                                 <input type="text" formControlName="nameOnCard" class="form-control" placeholder="Name on Card">
+                                <div *ngIf="creditCardNameOnCard!.invalid && (creditCardNameOnCard!.dirty || creditCardNameOnCard!.touched)" class="alert alert-danger mt-1 error">
+
+                                    <div *ngIf="creditCardNameOnCard!.errors!['required'] || creditCardNameOnCard!.errors!['notOnlyWhitespace']">Card Name is required.</div>
+                                   
+                                </div>
+
                             </div>
                         </div>
                     </div>
@@ -259,6 +271,13 @@
                         <div class="col-md-9">
                             <div class="input-space">
                                 <input type="text" formControlName="cardNumber" class="form-control" placeholder="Card Number">
+                                <div *ngIf="creditCardNumber!.invalid && (creditCardNumber!.dirty || creditCardNumber!.touched)" class="alert alert-danger mt-1 error">
+
+                                    <div *ngIf="creditCardNumber!.errors!['required']">Credit Card Number is required.</div>
+                                    <div *ngIf="creditCardNumber!.errors!['pattern']">Credit Card Number must have 16 digits!</div>
+                                   
+                                </div>
+
                             </div>
                         </div>
                     </div>
@@ -267,6 +286,13 @@
                         <div class="col-md-9">
                             <div class="input-space">
                                 <input type="text" formControlName="securityCode" class="form-control" placeholder="Security Code">
+                                <div *ngIf="creditCardSecurityCode!.invalid && (creditCardSecurityCode!.dirty || creditCardSecurityCode!.touched)" class="alert alert-danger mt-1 error">
+
+                                    <div *ngIf="creditCardSecurityCode!.errors!['required']">Security Code is required.</div>
+                                    <div *ngIf="creditCardSecurityCode!.errors!['pattern']">Security Code must have 3 digits!</div>
+                                   
+                                </div>
+
                             </div>
                         </div>
                     </div>
