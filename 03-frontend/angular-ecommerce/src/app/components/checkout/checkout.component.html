@@ -159,6 +159,13 @@
                                     {{ country.name }}
                                 </option>
                                </select>
+
+                               <div *ngIf="billingAddressCountry!.invalid && (billingAddressCountry!.dirty || billingAddressCountry!.touched)" class="alert alert-danger mt-1 error">
+
+                                <div *ngIf="billingAddressCountry!.errors!['required']">Country is required.</div>
+                               
+                               </div>
+
                             </div>
                         </div>
                     </div>
@@ -167,6 +174,12 @@
                         <div class="col-md-9">
                             <div class="input-space">
                                 <input type="text" formControlName="street" class="form-control" placeholder="Street">
+                                <div *ngIf="billingAddressStreet!.invalid && (billingAddressStreet!.dirty || billingAddressStreet!.touched)" class="alert alert-danger mt-1 error">
+
+                                    <div *ngIf="billingAddressStreet!.errors!['required'] || billingAddressStreet!.errors!['notOnlyWhitespace']">Street is required.</div>
+                                   
+                                </div>
+
                             </div>
                         </div>
                     </div>
@@ -175,6 +188,12 @@
                         <div class="col-md-9">
                             <div class="input-space">
                                 <input type="text" formControlName="city" class="form-control" placeholder="City">
+                                <div *ngIf="billingAddressCity!.invalid && (billingAddressCity!.dirty || billingAddressCity!.touched)" class="alert alert-danger mt-1 error">
+
+                                    <div *ngIf="billingAddressCity!.errors!['required'] || billingAddressCity!.errors!['notOnlyWhitespace']">City is required.</div>
+                                   
+                                </div>
+
                             </div>
                         </div>
                     </div>
@@ -187,6 +206,12 @@
                                         {{ state.name }}
                                     </option> 
                                 </select>
+                                <div *ngIf="billingAddressState!.invalid && (billingAddressState!.dirty || billingAddressState!.touched)" class="alert alert-danger mt-1 error">
+
+                                    <div *ngIf="billingAddressState!.errors!['required']">State is required.</div>
+                               
+                               </div>
+
                             </div>
                         </div>
                     </div>
@@ -195,6 +220,12 @@
                         <div class="col-md-9">
                             <div class="input-space">
                                 <input type="text" formControlName="zipCode" class="form-control" placeholder="Zip Code">
+                                <div *ngIf="billingAddressZipCode!.invalid && (billingAddressZipCode!.dirty || billingAddressZipCode!.touched)" class="alert alert-danger mt-1 error">
+
+                                    <div *ngIf="billingAddressZipCode!.errors!['required'] || billingAddressZipCode!.errors!['notOnlyWhitespace']">Zip Code is required.</div>
+                                   
+                                </div>
+
                             </div>
                         </div>
                     </div>
