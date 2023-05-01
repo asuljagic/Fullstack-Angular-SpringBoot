@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';
 import { Country } from 'src/app/common/country';
 import { State } from 'src/app/common/state';
+import { CartService } from 'src/app/services/cart.service';
 import { ShopFormService } from 'src/app/services/shop-form.service';
 import { ShopValidators } from 'src/app/validators/shop-validators';
 
@@ -27,9 +28,13 @@ export class CheckoutComponent implements OnInit {
   billingAddressStates: State[] = [];
   
   constructor(private formBuilder: FormBuilder,
-              private shopFormService: ShopFormService) { }
+              private shopFormService: ShopFormService,
+              private cartService: CartService) { }
 
   ngOnInit(): void {
+
+    this.reviewCartDetails();
+
 
     this.checkoutFormGroup = this.formBuilder.group({
       customer: this.formBuilder.group({
@@ -113,6 +118,19 @@ export class CheckoutComponent implements OnInit {
     );
   }
 
+  
+  reviewCartDetails() {
+    // subscribe to cart totalPrice
+    this.cartService.totalPrice.subscribe(
+      data => this.totalPrice = data
+    );
+
+    // subscribe to cart totalQuantity
+    this.cartService.totalQuantity.subscribe(
+      data => this.totalQuantity = data
+    );
+  }
+
   get firstName() { return this.checkoutFormGroup.get('customer.firstName'); }
   get lastName() { return this.checkoutFormGroup.get('customer.lastName'); }
   get email() { return this.checkoutFormGroup.get('customer.email'); }
@@ -133,7 +151,7 @@ export class CheckoutComponent implements OnInit {
   get creditCardNameOnCard() { return this.checkoutFormGroup.get('creditCard.nameOnCard'); }
   get creditCardNumber() { return this.checkoutFormGroup.get('creditCard.cardNumber'); }
   get creditCardSecurityCode() { return this.checkoutFormGroup.get('creditCard.securityCode'); }
-  
+
 
   onSubmit() {
     console.log("Handling the submit button");
