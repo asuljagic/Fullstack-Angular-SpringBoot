@@ -20,7 +20,7 @@ public class CheckoutController {
 
     @Autowired // This annotation will inject the CheckoutService bean into this constructor
     public CheckoutController(CheckoutService checkoutService) {
-        this.checkoutService = Objects.requireNonNull(checkoutService) ;
+        this.checkoutService = checkoutService ;
     }
 
     @PostMapping("/purchase")
