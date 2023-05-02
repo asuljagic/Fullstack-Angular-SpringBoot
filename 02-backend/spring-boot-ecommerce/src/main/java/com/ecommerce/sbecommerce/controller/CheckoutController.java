@@ -3,7 +3,10 @@ package com.ecommerce.sbecommerce.controller;
 import com.ecommerce.sbecommerce.dto.Purchase;
 import com.ecommerce.sbecommerce.dto.PurchaseResponse;
 import com.ecommerce.sbecommerce.service.CheckoutService;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
+
+import java.util.Objects;
 
 @CrossOrigin("http://localhost:4200")
 @RestController
@@ -12,8 +15,12 @@ public class CheckoutController {
 
     private CheckoutService checkoutService;
 
+    public CheckoutController() {
+    }
+
+    @Autowired // This annotation will inject the CheckoutService bean into this constructor
     public CheckoutController(CheckoutService checkoutService) {
-        this.checkoutService = checkoutService;
+        this.checkoutService = Objects.requireNonNull(checkoutService) ;
     }
 
     @PostMapping("/purchase")
