@@ -16,10 +16,12 @@ import { CheckoutComponent } from './components/checkout/checkout.component';
 import { ReactiveFormsModule } from '@angular/forms';
 import { ProductService } from './services/product.service';
 
-import { AuthModule } from '@auth0/auth0-angular';
+import { AuthGuard, AuthModule } from '@auth0/auth0-angular';
 import { AuthButtonComponent } from './components/auth-button/auth-button.component';
+import { MembersPageComponent } from './components/members-page/members-page.component';
 
 const routes: Routes = [
+  { path: 'members', component: MembersPageComponent, canActivate: [AuthGuard]},
 
   { path: 'checkout', component: CheckoutComponent},
   { path: 'cart-details', component: CartDetailsComponent},
@@ -42,7 +44,8 @@ const routes: Routes = [
     CartStatusComponent,
     CartDetailsComponent,
     CheckoutComponent,
-    AuthButtonComponent
+    AuthButtonComponent,
+    MembersPageComponent
     
   ],
   imports: [

@@ -215,7 +215,7 @@ section{
 }
 
 .au-input-xl{
-    min-width:935px
+    min-width:835px
 }
 
 input.au-input.au-input-xl{
@@ -247,7 +247,7 @@ input.au-input.au-input-xl{
     float:left;
     margin-top:16px;
     color:#fff;
-    margin-left:15px
+    margin-left:10px
 }
 
 .total{
@@ -258,7 +258,7 @@ input.au-input.au-input-xl{
     border:1px solid #0da8e4;
     float:left;
     margin-top:7px;
-    padding-left:17px
+    padding-left:10px
 }
 
 .total span{
@@ -802,7 +802,7 @@ footer ul li{
 
 @media (max-width:1600px){
     .au-input-xl{
-        min-width:290px
+        min-width:250px
     }
 }
 @media (max-width:1315px) and (min-width:992px){
@@ -855,6 +855,15 @@ footer ul li{
         width: 100%
     }
 
+    .cart-area i{
+        display: none;
+    }
+
+    .total {
+        display:inline-flex;
+        margin-left: 5px;
+    }
+    
 
 }
 
@@ -896,7 +905,7 @@ footer ul li{
         position:relative;
         top:0;
         left:0;
-        height:80px
+        height:120px
     }
     .header-wrap{
         -webkit-box-orient:vertical;
@@ -964,7 +973,7 @@ footer ul li{
 
 @media (max-width:767px){
       .au-input-xl{
-        min-width:150px
+        min-width:100px
     }
     .header-button-item{
         font-size:22px;
@@ -990,7 +999,7 @@ footer ul li{
         position:relative;
         top:0;
         left:0;
-        height:80px
+        height:150px
     }
     a.logo img{
         height: 50px;
@@ -1016,7 +1025,7 @@ footer ul li{
         margin-left: 10%;
     }
     .product-box{
-        text-align:centerg
+        text-align:center
     }
     .page-container{
         position:relative;
@@ -1076,6 +1085,11 @@ footer ul li{
         border:0;
         padding:8px 0
     }
+
+    .header-wrap{
+        display: inline-flex;
+    }
+
 
     #quantity{
         margin-left: -1%;
