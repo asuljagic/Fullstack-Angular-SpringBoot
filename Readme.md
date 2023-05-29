@@ -27,4 +27,4 @@ This is a full stack e-commerce web application with Angular and Spring Boot.
 
 - Login using Auth0
 
-<img src="LoginAuth0.png" width="50%" height="300px">
+<img src="LoginAuth0.png" width="400px" height="400px">
