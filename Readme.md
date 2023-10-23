@@ -1,7 +1,7 @@
 # Full stack web App with Angular and Spring Boot
 ## Description
-
-This is a full stack e-commerce web application with Angular and Spring Boot.
+This is a personal project done in free time.
+This is a full stack e-commerce web application with Angular and Spring Boot. 
 
 ## Versions
 
